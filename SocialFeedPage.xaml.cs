@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using TeamRing.Models;
 
-namespace TeamRing;
+namespace 3iosMA_jja;
 
 public partial class SocialFeedPage : ContentPage
 {
