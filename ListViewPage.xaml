@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.ListViewPage"
+             Title="ListView"
+             BackgroundColor="#F7F7F7">
+
+    <ListView ItemsSource="{Binding Items}"
+              SeparatorVisibility="None"
+              Margin="16"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Border BackgroundColor="White" Stroke="#E5E5E5" Padding="16" Margin="0,0,0,12">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="18" />
+                        </Border.StrokeShape>
+                        <Label Text="{Binding}"
+                               FontSize="16"
+                               TextColor="#222222" />
+                    </Border>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
