@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace TeamRing;
+namespace 3iosMA_jja;
 
 public partial class ListViewPage : ContentPage
 {
