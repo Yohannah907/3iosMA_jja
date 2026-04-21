@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.CollectionViewPage"
+             Title="CollectionView"
+             BackgroundColor="#F7F7F7">
+
+    <CollectionView ItemsSource="{Binding Items}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnItemSelected"
+                    Margin="16">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border BackgroundColor="White" Stroke="#E5E5E5" Padding="16" Margin="0,0,0,12">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="18" />
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="{Binding Name}"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#111111" />
+                        <Label Text="{Binding Description}"
+                               FontSize="13"
+                               TextColor="#666666" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
