@@ -1,6 +1,6 @@
-using TeamRing.Models;
+using 3iosMA_jja.Models;
 
-namespace TeamRing;
+namespace 3iosMA_jja;
 
 public partial class NewPostPage : ContentPage
 {
