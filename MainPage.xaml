@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.MainPage"
+             Title="Samples"
+             BackgroundColor="#F7F7F7">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Label Text="Team Ring"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#111111" />
+
+            <Border Stroke="#E5E5E5" StrokeThickness="1" BackgroundColor="White" Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <Button Text="ScrollView Page"
+                        Clicked="OpenScrollViewPage"
+                        BackgroundColor="#111111"
+                        TextColor="White" />
+            </Border>
+
+            <Border Stroke="#E5E5E5" StrokeThickness="1" BackgroundColor="White" Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <Button Text="ListView Page"
+                        Clicked="OpenListViewPage"
+                        BackgroundColor="#111111"
+                        TextColor="White" />
+            </Border>
+
+            <Border Stroke="#E5E5E5" StrokeThickness="1" BackgroundColor="White" Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <Button Text="CollectionView Page"
+                        Clicked="OpenCollectionViewPage"
+                        BackgroundColor="#111111"
+                        TextColor="White" />
+            </Border>
+
+            <Border Stroke="#E5E5E5" StrokeThickness="1" BackgroundColor="White" Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="18" />
+                </Border.StrokeShape>
+                <Button Text="Social Feed Page"
+                        Clicked="OpenSocialFeedPage"
+                        BackgroundColor="#111111"
+                        TextColor="White" />
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
