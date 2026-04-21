@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace TeamRing
+namespace 3iosMA_jja
 {
     public static class MauiProgram
     {
