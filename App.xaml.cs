@@ -1,4 +1,4 @@
-﻿namespace TeamRing
+﻿namespace 3iosMA_jja
 {
     public partial class App : Application
     {
