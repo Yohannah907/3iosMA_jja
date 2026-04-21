@@ -1,4 +1,4 @@
-﻿namespace TeamRing;
+﻿namespace jja;
 
 public class PostItem
 {
