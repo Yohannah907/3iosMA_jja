@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.PostDetailPage"
+             Title="Post Details"
+             BackgroundColor="#F7F7F7">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Button Text="Back"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#E5E5E5"
+                    TextColor="Black"
+                    CornerRadius="12"
+                    HorizontalOptions="Start" />
+
+            <Border BackgroundColor="White"
+                    Stroke="Black"
+                    Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="10">
+                    <Label x:Name="AuthorLabel"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#111111" />
+
+                    <Label x:Name="TimeLabel"
+                           FontSize="12"
+                           TextColor="Gray" />
+
+                    <Label x:Name="ContentLabel"
+                           FontSize="16"
+                           TextColor="#222222" />
+
+                    <Image x:Name="PostImage"
+                           HeightRequest="200"
+                           Aspect="AspectFill" />
+
+                    <Label x:Name="LikesLabel"
+                           FontSize="14"
+                           TextColor="#444444" />
+
+                    <Button Text="Like"
+                            Clicked="OnLikeClicked"
+                            BackgroundColor="#4F46E5"
+                            TextColor="White"
+                            CornerRadius="12" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Comments"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black" />
+
+            <CollectionView x:Name="CommentsCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BackgroundColor="White"
+                                Stroke="#DDDDDD"
+                                Padding="12"
+                                Margin="0,0,0,8">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="12" />
+                            </Border.StrokeShape>
+
+                            <Label Text="{Binding}"
+                                   TextColor="Black" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Editor x:Name="CommentEditor"
+                    Placeholder="Write a comment..."
+                    HeightRequest="100"
+                    TextColor="Black"
+                    PlaceholderColor="Gray"
+                    BackgroundColor="White" />
+
+            <Button Text="Add Comment"
+                    Clicked="OnAddCommentClicked"
+                    BackgroundColor="#4F46E5"
+                    TextColor="White"
+                    CornerRadius="12" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
