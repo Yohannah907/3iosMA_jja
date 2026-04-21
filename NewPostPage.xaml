@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.NewPostPage"
+             Title="Create Post"
+             BackgroundColor="#F7F7F7">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="Create New Post"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#111111" />
+
+            <Border BackgroundColor="White" Stroke="#E5E5E5" Padding="16">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+                    <Entry x:Name="AuthorEntry"
+               Placeholder="Your name"
+               TextColor="#111111"
+               PlaceholderColor="#888888"
+               BackgroundColor="Transparent" />
+
+                    <Editor x:Name="PostEditor"
+                Placeholder="What's on your mind?"
+                AutoSize="TextChanges"
+                HeightRequest="150"
+                TextColor="#111111"
+                PlaceholderColor="#888888"
+                BackgroundColor="Transparent" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                <Button Grid.Column="0"
+                        Text="Cancel"
+                        Clicked="OnCancelClicked" />
+
+                <Button Grid.Column="1"
+                        Text="Post"
+                        Clicked="OnPostClicked" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
