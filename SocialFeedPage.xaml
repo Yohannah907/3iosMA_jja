@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamRing.SocialFeedPage"
+             Title="Social Feed"
+             BackgroundColor="#F7F7F7">
+
+    <Grid RowDefinitions="Auto,*" Padding="16">
+
+        <Button Text="+ New Post"
+                Clicked="OnNewPostClicked"
+                BackgroundColor="#4F46E5"
+                TextColor="black"
+                CornerRadius="12"
+                HeightRequest="50" />
+
+        <CollectionView Grid.Row="1"
+                x:Name="PostsCollectionView"
+                SelectionMode="Single"
+                SelectionChanged="OnPostSelected"
+                Margin="0,16,0,0">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="White"
+                Stroke="Black"
+                Padding="16"
+                Margin="0,0,0,12">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16" />
+                        </Border.StrokeShape>
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="{Binding Author}"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                       TextColor="#111111" />
+
+                            <Label Text="{Binding TimeDisplay}"
+                       FontSize="12"
+                       TextColor="Gray" />
+
+                            <Label Text="{Binding Content}"
+                       FontSize="15"
+                       TextColor="#222222" />
+
+                            <Image Source="{Binding ImageUrl}"
+                       HeightRequest="180"
+                       Aspect="AspectFill" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
